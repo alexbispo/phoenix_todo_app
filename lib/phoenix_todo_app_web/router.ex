@@ -16,7 +16,7 @@ defmodule PhoenixTodoAppWeb.Router do
   scope "/", PhoenixTodoAppWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", TodosController, :index
   end
 
   # Other scopes may use custom stacks.
