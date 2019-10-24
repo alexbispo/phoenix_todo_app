@@ -2,8 +2,9 @@ defmodule PhoenixTodoAppWeb.TodosController do
   use PhoenixTodoAppWeb, :controller
 
   def index(conn, _params) do
+    todos = find_todos()
     conn
-    |> assign(:todo_list, find_todos)
+    |> assign(:todo_list, todos)
     |> render("index.html")
   end
 
