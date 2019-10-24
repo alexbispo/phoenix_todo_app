@@ -1,5 +1,18 @@
 <h1># TODOS</h1>
 
-<%= for todo <- @todo_list do %>
-    <p><%= todo.title %></p>
-<% end %>
+<table>
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%= for todo <- @todo_list do %>
+            <tr>
+                <td><%= todo.title %></td>
+                <td><%= todo.status %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
