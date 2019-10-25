@@ -1,25 +1,31 @@
 <h1># TODOS</h1>
 
-<form>
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-</form>
+<div class="row">
+	<form class="form-inline" action="/" method="GET">
+		<div class="custom-control custom-checkbox my-1 mr-sm-2">
+			<input type="checkbox" class="custom-control-input" id="cbStatus" name="status" value="0">
+			<label class="custom-control-label" for="cbStatus">Pendente</label>
+		</div>
 
-<table>
-    <thead>
-        <tr>
-            <th>Título</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <%= for todo <- @todo_list do %>
-            <tr>
-                <td><%= todo.title %></td>
-                <td><%= todo.status %></td>
-            </tr>
-        <% end %>
-    </tbody>
-</table>
+		<button type="submit" class="btn btn-primary my-1">Buscar</button>
+	</form>
+</div>
+
+<div class="row">
+	<table class="table">
+			<thead>
+					<tr>
+							<th>Título</th>
+							<th>Status</th>
+					</tr>
+			</thead>
+			<tbody>
+					<%= for item <- @todo_items do %>
+							<tr>
+									<td><%= item.title %></td>
+									<td><%= format_status(item.status) %></td>
+							</tr>
+					<% end %>
+			</tbody>
+	</table>
+</div>
