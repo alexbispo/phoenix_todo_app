@@ -4,7 +4,7 @@ defmodule PhoenixTodoApp.TasksTest do
   alias PhoenixTodoApp.Tasks
 
   describe "tasks" do
-    alias PhoenixTodoApp.Tasks.Task
+    alias PhoenixTodoApp.Task
 
     @valid_attrs %{}
     @update_attrs %{}
