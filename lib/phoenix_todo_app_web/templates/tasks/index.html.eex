@@ -20,10 +20,10 @@
 					</tr>
 			</thead>
 			<tbody>
-					<%= for item <- @todo_items do %>
+					<%= for task <- @tasks do %>
 							<tr>
-									<td><%= item.title %></td>
-									<td><%= format_status(item.status) %></td>
+									<td><%= task.title %></td>
+									<td><%= format_status(task.status) %></td>
 							</tr>
 					<% end %>
 			</tbody>

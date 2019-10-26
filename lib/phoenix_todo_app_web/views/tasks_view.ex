@@ -1,4 +1,4 @@
-defmodule PhoenixTodoAppWeb.TodosView do
+defmodule PhoenixTodoAppWeb.TasksView do
   use PhoenixTodoAppWeb, :view
 
   def format_status(0), do: "Pendente"
