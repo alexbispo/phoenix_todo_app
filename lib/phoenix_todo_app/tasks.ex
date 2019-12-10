@@ -24,4 +24,13 @@ defmodule PhoenixTodoApp.Tasks do
   def list_by_status(status) do
     Repo.all(from t in Task, where: t.status == ^status)
   end
+
+  def get(id) do
+    Repo.get(Task, id)
+  end
+
+  def update(task, attrs) do
+    changes = Task.changeset(task, attrs)
+    Repo.update(changes)
+  end
 end

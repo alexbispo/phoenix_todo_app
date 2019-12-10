@@ -23,7 +23,14 @@
 					<%= for task <- @tasks do %>
 							<tr>
 									<td><%= task.title %></td>
-									<td><%= format_status(task.status) %></td>
+									<td>
+                      <%= if Task.active?(task) do %>
+                        <%= link("=)", to: Routes.tasks_path(@conn, :undone, task.id), method: :post, class: "btn btn-success") %>
+                      <% else %>
+                        <%= link("=(", to: Routes.tasks_path(@conn, :done, task.id), method: :post, class: "btn btn-light") %>
+                      <% end %>
+                    </div>
+                  </td>
 							</tr>
 					<% end %>
 			</tbody>

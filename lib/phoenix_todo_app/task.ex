@@ -15,4 +15,8 @@ defmodule PhoenixTodoApp.Task do
     |> cast(attrs, [:title, :status])
     |> validate_required([:title])
   end
+
+  def active?(task) do
+    task.status == 1
+  end
 end

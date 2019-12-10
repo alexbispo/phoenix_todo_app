@@ -1,8 +1,8 @@
 defmodule PhoenixTodoAppWeb.TasksView do
   use PhoenixTodoAppWeb, :view
 
-  alias PhoenixTodoAppWeb.Router.Helpers, as: Routes
+  alias PhoenixTodoApp.Task
 
-  def format_status(0), do: "Pendente"
-  def format_status(1), do: "Feito"
+  def check_status_style(0), do: "btn-light"
+  def check_status_style(1), do: "btn-success active"
 end

@@ -17,6 +17,8 @@ defmodule PhoenixTodoAppWeb.Router do
     pipe_through :browser
 
     get "/", TasksController, :index
+    post "/done/:id", TasksController, :done
+    post "/undone/:id", TasksController, :undone
   end
 
   # Other scopes may use custom stacks.
