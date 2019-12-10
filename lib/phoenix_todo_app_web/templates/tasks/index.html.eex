@@ -1,7 +1,7 @@
 <h1># TODOS</h1>
 
 <div class="row">
-	<form class="form-inline" action="/" method="GET">
+	<form class="form-inline" action="<%= Routes.tasks_path(@conn, :index) %>" method="GET">
 		<div class="custom-control custom-checkbox my-1 mr-sm-2">
 			<input type="checkbox" class="custom-control-input" id="cbStatus" name="status" value="0">
 			<label class="custom-control-label" for="cbStatus">Pendente</label>
