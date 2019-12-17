@@ -8,6 +8,5 @@ defmodule PhoenixTodoApp.Repo.Migrations.CreateTasks do
 
       timestamps()
     end
-
   end
 end
